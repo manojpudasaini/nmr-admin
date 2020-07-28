@@ -4,10 +4,11 @@
     padding: 0 24px;
     cursor: pointer;
     transition: color 0.3s;
+    background-color: #3b0e06;
   }
   
   #components-layout-demo-custom-trigger .trigger:hover {
-    color: #1890ff;
+    color: #46080b;
   }
   
   #components-layout-demo-custom-trigger .logo {
@@ -16,7 +17,29 @@
     margin: 16px;
   }
   
-  .site-layout .site-layout-background {
-    background: #fff;
+  .site-layout-background {
+    font-size: 18px;
+    
+   
+  }
+  .content{
+    background: blanchedalmond;
+  }
+  .layout{
     height: 100vh;
+  }
+  .logo{
+    display: flex;
+    justify-content: center;
+    color: burlywood;
+    margin-top: 20px;
+  }
+  .menu{
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  .trigger{
+ color: blanchedalmond;    
+ font-size: 20px;
+
   }
