@@ -2,15 +2,19 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import { Layout } from 'antd';
 import Sider from './Components/Organism/Sidebar/sider';
-
-
+import Header from './Components/Organism/Header/header';
+import './Components/Organism/Layout/Layout.css';
 const PrivateRoute=(props)=>{
+    const {Content}=Layout;
     return(
        <Route {...props}>
-           <Layout>
+           <Layout className="wrapper">
                <Sider/>
-               <Layout>
+               <Layout className="site-layout">
+               <Header/>
+                   <Content className="content-wrapper">
                    <props.component/>
+                   </Content>
                </Layout>
            </Layout>
        </Route>

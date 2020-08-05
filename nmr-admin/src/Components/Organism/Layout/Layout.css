@@ -1,6 +1,11 @@
 .site-layout .site-layout-background {
-    background: #fff;
+    background: '#001529';
+   
   }
   .wrapper{
     height: 100vh;
+  }
+  .content-wrapper{
+    padding: 20px;
+  
   }
