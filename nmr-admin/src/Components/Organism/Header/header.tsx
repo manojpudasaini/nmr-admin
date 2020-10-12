@@ -3,7 +3,7 @@ import { Layout, Button } from "antd";
 import "antd/dist/antd.css";
 
 import "./header.css";
-const MainHeader = (props) => {
+const MainHeader = (props:any) => {
   const { Header } = Layout;
 
   return (

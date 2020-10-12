@@ -4,7 +4,7 @@ import { Layout } from 'antd';
 import Sider from './Components/Organism/Sidebar/sider';
 import Header from './Components/Organism/Header/header';
 import './Components/Organism/Layout/Layout.css';
-const PrivateRoute=(props)=>{
+const PrivateRoute=(props:any)=>{
     const {Content}=Layout;
     return(
        <Route {...props}>

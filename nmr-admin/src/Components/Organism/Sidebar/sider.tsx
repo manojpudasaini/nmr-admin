@@ -8,7 +8,7 @@ import {
 import 'antd/dist/antd.css';
 import "./sider.css"
 import { Link } from "react-router-dom";
-const Sider = (props) => {
+const Sider = (props:any) => {
   const { Sider } = Layout;
   return (
     <Sider  trigger={null} collapsible collapsed={props.status} >
