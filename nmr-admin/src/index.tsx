@@ -7,10 +7,14 @@ import Movies from "./Components/pages/movies";
 import PrivateRoute from "./PrivateRoute";
 import Series from "./Components/pages/series";
 import Inputfield from './Components/Atoms/Input/index';
+import ButtonField from "./Components/Atoms/Button/index";
+import TextAreaField from "./Components/Atoms/Textarea/index";
+// const clickFunction =()=>{
+//   alert("hello")
+// }
 ReactDOM.render(
-<Inputfield type="text"/>
-,
-  document.getElementById("root")
+<TextAreaField placeholder="your view..."/>
+,  document.getElementById("root")
 );
 
 serviceWorker.unregister();
