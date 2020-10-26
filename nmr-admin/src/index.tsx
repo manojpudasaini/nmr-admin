@@ -6,15 +6,16 @@ import { BrowserRouter, Switch } from "react-router-dom";
 import Movies from "./Components/pages/movies";
 import PrivateRoute from "./PrivateRoute";
 import Series from "./Components/pages/series";
-import Inputfield from './Components/Atoms/Input/index';
-import ButtonField from "./Components/Atoms/Button/index";
-import TextAreaField from "./Components/Atoms/Textarea/index";
-// const clickFunction =()=>{
-//   alert("hello")
-// }
+import Test from "./page";
+
 ReactDOM.render(
-<TextAreaField placeholder="your view..."/>
-,  document.getElementById("root")
+  <BrowserRouter>
+    <Switch>
+      <PrivateRoute exact  path="/series" component={Series}></PrivateRoute>
+      <PrivateRoute  path="/" component={Test}></PrivateRoute>
+    </Switch>
+  </BrowserRouter>,
+ document.getElementById("root")
 );
 
 serviceWorker.unregister();

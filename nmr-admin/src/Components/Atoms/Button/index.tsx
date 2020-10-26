@@ -5,15 +5,16 @@ import 'antd/dist/antd.css';
 export interface ButtonProps{
     type ?: any,
     value ?: string,
-    clickFunction :()=>void
+    clickFunction ?:()=>void,
+    className ?: any, 
 
 }
 
 const ButtonField: React.FC<ButtonProps>=(props)=>{
         return(
-        <Button type={props.type} onClick={props.clickFunction}>{props.value}</Button>
+        <Button className={props.className} type={props.type} onClick={props.clickFunction}>{props.children}</Button>
         )
 }
 
 
-export default ButtonField;
+export  {ButtonField};
