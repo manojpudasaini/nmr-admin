@@ -8,7 +8,7 @@ const MainHeader = (props:any) => {
 
   return (
     <Header className="site-layout-background" style={{ padding: 0 }}>
-      <h1>Movie Review</h1>
+      <h1>Add Project</h1>
       <div>
         
       </div>

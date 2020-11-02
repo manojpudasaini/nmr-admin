@@ -12,11 +12,10 @@ const Sider = (props:any) => {
   const { Sider } = Layout;
   return (
     <Sider  trigger={null} collapsible collapsed={props.status} >
-      <div className="logo">LOGO</div>
-      <Menu  theme="dark" mode="inline" defaultSelectedKeys={["1"]}  >
+      <Menu  theme="dark" mode="inline" defaultSelectedKeys={["1"]} className="menuWrapper"  >
         <Menu.Item key="1" icon={<UserOutlined />}>
-          Series
-          <Link to="/series"/>
+          Add Project
+          <Link to="/addproject"/>
         </Menu.Item>
         <Menu.Item key="2" icon={<VideoCameraOutlined />}>
         Movie

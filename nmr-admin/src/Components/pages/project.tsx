@@ -1,13 +1,19 @@
 import React,{useState} from "react";
 import Inputfield from '../Atoms/Input/index';
-import {Button, Form, Input} from 'antd';
-const Movies =()=>{
+import {Button, Form, Input, Tag, Select} from 'antd';
+import {db} from "../../firebase"
+
+
+const Project =()=>{
     const [formData,setFormData]=useState({
-        pname:"Google Maps",
-        language:"java"
+        pName:'',
+        language:[] as any,
+        pLink:'',
+        iLink:''
     })
-    const saveForm=()=>{
-        console.log(formData)
+    const saveForm=async()=>{
+        const res = await db.collection('project').add(formData);
+        console.log(res)
     }
     return(
         <div >
@@ -15,20 +21,38 @@ const Movies =()=>{
          
            <Form layout='vertical' onFinish={saveForm} >
                <Form.Item label="Project Name">
-               <Input value={formData.pname} type="text" onChange={(e)=>{setFormData({
+               <Input value={formData.pName} type="text" onChange={(e)=>{setFormData({
                    ...formData,
-                   pname:e.target.value
+                   pName:e.target.value
                })}}/>
                </Form.Item>
-               <Form.Item label="Project Name">
-               <Input type="text"/>
+               <Form.Item label="Image Link">
+               <Input value={formData.iLink} type="text" onChange={(e)=>{setFormData({
+                   ...formData,
+                   iLink:e.target.value
+               })}}/>
                </Form.Item>
-               <Form.Item label="Project Name">
-               <Input type="text"/>
+               <Form.Item label="Project Link">
+               <Input value={formData.pLink} type="text" onChange={(e)=>{setFormData({
+                   ...formData,
+                   pLink:e.target.value
+               })}}/>
                </Form.Item>
-               <Form.Item label="Project Name">
-               <Input type="text"/>
+
+               <Form.Item>
+               <Select
+          mode="tags"
+          size='large'
+          placeholder="Please select"
+          onChange={(value)=>{setFormData({
+              ...formData,
+              language:value
+          })}}
+          style={{ width: '100%' }} >
+    
+        </Select>
                </Form.Item>
+
                <Form.Item >
                    <Button htmlType="submit">Save</Button>
                </Form.Item>
@@ -36,4 +60,4 @@ const Movies =()=>{
         </div>
     )
 }
-export default Movies;
+export default Project;
